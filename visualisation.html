@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STI Visualisation | Support for Her</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/visualisation.css">
+    <div id="google_translate_element" class="translate-container"></div>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Support For Her Logo" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menstrualCycleDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menstrual Cycle
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="menstrualCycleDropdown">
+                        <a class="dropdown-item" href="cycle.html">Cycle Tracker</a>
+                        <a class="dropdown-item" href="quiz.html">Menstrual Cycle Quiz</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="personalisedAssessmentDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Personalised Assessment
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="personalisedAssessmentDropdown">
+                        <a class="dropdown-item" href="report.html">Personalised Report</a>
+                        <a class="dropdown-item" href="maternal.html">Maternal Health Risk Assessment</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="knowledgeHubDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Knowledge Hub
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="knowledgeHubDropdown">
+                        <a class="dropdown-item" href="infographic.html">Infographics</a>
+                        <a class="dropdown-item" href="policy.html">Policy Finder</a>
+                        <a class="dropdown-item" href="visualisation.html">STI Visualisation</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="language-selector" class="nav-link">Language</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="health-report-section text-center py-5">
+        <div class="container">
+            <h1 class="page-title">STI Visualisation</h1>
+            <p id="disclaimer">Please select a year, type of STI data, and distribution type to view the related STI
+                graphics. Use our <a href="infographic.html">infographic page</a> to learn more about STI and other
+                reproductive and sexual health problems.</p>
+
+            <div class="select-wrapper">
+                <div class="select-container">
+                    <label for="year">Step 1: Select a Year:</label>
+                    <select id="year" onchange="updateCharts()">
+                    </select>
+                    <div class="arrow">▼</div>
+                </div>
+
+                <div class="select-container">
+                    <label for="sti">Step 2: Select a STI type:</label>
+                    <select id="sti" onchange="updateCharts()">
+                    </select>
+                    <div class="arrow">▼</div>
+                </div>
+            </div>
+
+            <!-- Buttons to switch between charts -->
+            <div class="buttons">
+                <label for="buttons">Step 3: Select a type of visualisation:</label>
+                <div class="buttons-row">
+                    <button id="mapButton" class="btn-custom">STI Geographic Distribution</button>
+                    <button id="barButton" class="btn-custom">STI Age Distribution</button>
+                    <button id="pieButton" class="btn-custom">STI Gender Distribution</button>
+                </div>
+            </div>
+
+
+            <div id="map" class="chart-container"></div>
+            <div id="barchart" class="chart-container"></div>
+            <div id="piechart" class="chart-container"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-left text-center mb-3 mb-md-0">
+                    <img src="images/footerlogo.png" alt="Logo" class="footer-logo" style="max-width: 300px;">
+                </div>
+
+                <div class="col-md-6 text-md-right text-center mb-3 mb-md-0">
+                    <h5 class="font-weight-bold">Contact Us</h5>
+                    <p>Email: <a href="mailto:support@supportforherau.com">support@supportforherau.me</a></p>
+                    <p>Phone: +61 123 456 789</p>
+                    <p>Address: Clayton Street, Melbourne, VIC 3000, Australia</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <p class="small mb-0">&copy; 2024 Support For Her AU. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/visualisation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

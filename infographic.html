@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic | Support for Her</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/infographic.css">
+    <div id="google_translate_element" class="translate-container"></div>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Support For Her Logo" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menstrualCycleDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menstrual Cycle
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="menstrualCycleDropdown">
+                        <a class="dropdown-item" href="cycle.html">Cycle Tracker</a>
+                        <a class="dropdown-item" href="quiz.html">Menstrual Cycle Quiz</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="personalisedAssessmentDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Personalised Assessment
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="personalisedAssessmentDropdown">
+                        <a class="dropdown-item" href="report.html">Personalised Report</a>
+                        <a class="dropdown-item" href="maternal.html">Maternal Health Risk Assessment</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="knowledgeHubDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Knowledge Hub
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="knowledgeHubDropdown">
+                        <a class="dropdown-item" href="infographic.html">Infographics</a>
+                        <a class="dropdown-item" href="policy.html">Policy Finder</a>
+                        <a class="dropdown-item" href="visualisation.html">STI Visualisation</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="language-selector" class="nav-link">Language</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Infographic Section -->
+    <section class="header-section text-center">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-12 text-center">
+
+                    <h1 class="page-title">Infographics</h1>
+
+                    <p class="description">
+                        Explore various infographics related to reproductive health topics.
+                        Use the buttons below to explore different topics. You can select a specific category to view
+                        relevant infographics, or click "Show All" to display all available infographics.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-12">
+                    <button id="btn-menstrual-cycle" class="btn-custom">Menstrual Cycle</button>
+                    <button id="btn-safe-sex" class="btn-custom">Safe Sex</button>
+                    <button id="btn-sexual-diseases" class="btn-custom">Sexual Diseases</button>
+                    <button id="btn-show-all" class="btn-custom">Show All</button>
+                    <button id="btn-show-sources" class="btn-custom">View Sources</button>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12" id="infographic-gallery">
+                </div>
+
+                <!-- <div class="col-12" id="infographic-sources" style="display: none;">
+
+                    <h3>Image Sources (APA format)</h3>
+                    <ul>
+                        <li>All the Beautiful Things. (2016, November 9). Get symptoms looked at. Retrieved from
+                            <a href="https://www.allthebeautifulthings.co.uk/2016/11/get-symptoms-looked-at"
+                                target="_blank">
+                                https://tinyurl.com/2nbz4e5y</a>
+                        </li>
+                        <li>Ashlee Tabrett. (n.d.). Understanding your menstrual cycle and how to optimize fertility
+                            naturally. Retrieved from
+                            <a href="https://www.ashleetabrett.com/blog/understanding-your-menstrual-cycle-and-how-to-optimize-fertility-naturally"
+                                target="_blank">
+                                https://tinyurl.com/2mupm2e2</a>
+                        </li>
+                        <li>Chicago Tribune. (2016, September 19). World Contraception Day: What birth control is
+                            right for you? Retrieved from
+                            <a href="https://www.chicagotribune.com/2016/09/19/world-contraception-day-what-birth-control-is-right-for-you-infographic"
+                                target="_blank">
+                                https://tinyurl.com/y2b4aa2x</a>
+                        </li>
+                        <li>Efamol. (n.d.). Cycle syncing your workouts: How to exercise according to your menstrual
+                            cycle. Retrieved from
+                            <a href="https://www.efamol.com/blogs/advice/cycle-syncing-your-workouts-how-to-exercise-according-to-your-menstrual-cycle"
+                                target="_blank">
+                                https://tinyurl.com/5xb7dpxz</a>
+                        </li>
+                        <li>Examined Alive. (2024, October 1). Understanding the connection between menstrual health
+                            and overall well-being [Post]. Retrieved from
+                            <a href="https://x.com/examinedalive/status/1793663128481550710" target="_blank">
+                                https://tinyurl.com/yeyrrrme</a>
+                        </li>
+                        <li>Find My Method. (2024, October 7). External condoms: How to use and benefits [Post].
+                            Retrieved from
+                            <a href="https://www.facebook.com/findmymethod/photos/a.1345171832292301/2375347952608012/?type=3"
+                                target="_blank">
+                                https://tinyurl.com/5n8yrdzz</a>
+                        </li>
+                        <li>Four Seasons of You. (n.d.). The four phases of you. Retrieved from
+                            <a href="https://4seasonsofyou.com/thefourphases-ofyou" target="_blank">
+                                https://tinyurl.com/bden9ptn</a>
+                        </li>
+                        <li>HIVinfo.NIH.gov. (n.d.). HIV and AIDS: What's the difference?. Retrieved from
+                            <a href="https://hivinfo.nih.gov/understanding-hiv/infographics/hiv-and-aids-whats-difference"
+                                target="_blank">
+                                https://tinyurl.com/5n92kubu</a>
+                        </li>
+                        <li>McLeod, S. (2020). Anxiety in women. Retrieved from
+                            <a href="https://www.simplypsychology.org/anxiety-in-women.html" target="_blank">
+                                https://tinyurl.com/2z87a3xe</a>
+                        </li>
+                        <li>Mind & Mom. (n.d.). Decoding discharge: Understanding cervical mucus and fertility.
+                            Retrieved from
+                            <a href="https://mindandmom.com/decoding-discharge-understanding-cervical-mucus-and-fertility"
+                                target="_blank">
+                                https://tinyurl.com/mryxuu2t</a>
+                        </li>
+                        <li>New Jersey Family Planning League. (n.d.). How to put on a condom. Retrieved from
+                            <a href="https://njfpl.org/how-to-put-on-a-condom" target="_blank">
+                                https://tinyurl.com/bddvjur7</a>
+                        </li>
+                        <li>Pinterest. (n.d.). Signs of hormonal imbalance. Retrieved from
+                            <a href="https://au.pinterest.com/pin/165929567507932898" target="_blank">
+                                https://au.pinterest.com/pin/165929567507932898</a>
+                        </li>
+                        <li>Shop With Me Mama. (n.d.). Easily understand the ovulation process. Retrieved from
+                            <a href="https://shopwithmemama.com/easily-understand-ovulation-process" target="_blank">
+                                https://tinyurl.com/4b7bk2fn</a>
+                        </li>
+                        <li>StrongHer. (n.d.). Training around your menstrual cycle. Retrieved from
+                            <a href="https://www.strongher.co.uk/blog/training-around-your-menstrual-cycle"
+                                target="_blank">
+                                https://tinyurl.com/fpcwn7vj</a>
+                        </li>
+                        <li>The Daily Texan. (2017, April 25). Condoms, not ignorance, belong in bedroom. Retrieved
+                            from
+                            <a href="https://thedailytexan.com/2017/04/25/condoms-not-ignorance-belong-in-bedroom"
+                                target="_blank">
+                                https://tinyurl.com/pc3zyt54</a>
+                        </li>
+                        <li>The Gym Starter. (2020, March 14). How does your menstrual cycle affect your fitness and
+                            weight loss?. Retrieved from
+                            <a href="https://www.thegymstarter.com/blog/2020/3/14/how-does-your-menstrual-cycle-affect-your-fitness-and-weight-loss"
+                                target="_blank">
+                                https://tinyurl.com/9h3kpndw</a>
+                        </li>
+                        <li>Travis, A. (2016). HPV infographics: Protect and prevent. Retrieved from
+                            <a href="https://travistheillustrator.com/2016-hpv-infographics-protect-prevent"
+                                target="_blank">
+                                https://tinyurl.com/4twbhkdt</a>
+                        </li>
+                        <li>University of Texas at El Paso. (n.d.). Healthy mind infographics. Retrieved from
+                            <a href="https://www.utep.edu/healthy-mind/infographics/infographics.html" target="_blank">
+                                https://tinyurl.com/ymduybrz</a>
+                        </li>
+                        <li>Venngage. (n.d.). AIDS statistics infographic. Retrieved from
+                            <a href="https://venngage.com/templates/infographics/aids-statistics-infographics-2ebaef87-f3e7-4cd1-8c8d-2306de387774"
+                                target="_blank">
+                                https://tinyurl.com/4z7kbkf9</a>
+                        </li>
+                        <li>Virginia De Martin. (2024, October 6). Recovery from training across the menstrual
+                            cycle: Insights from top athletes [Post]. Retrieved from
+                            <a href="https://www.linkedin.com/posts/virginia-de-martin-188735a7_recovery-from-training-across-the-menstrual-activity-7118141071783567361-A2Jg?trk=public_profile_share_view"
+                                target="_blank">
+                                https://tinyurl.com/5cvnfs5z</a>
+                        </li>
+                        <li>Wellness Hub. (2024, October 7). Managing menstrual symptoms with holistic approaches
+                            [Post]. Retrieved from
+                            <a href="https://www.facebook.com/story.php/?story_fbid=943391917582809&id=100057360283752"
+                                target="_blank">
+                                https://tinyurl.com/4fxwure5</a>
+                        </li>
+                    </ul>
+
+
+                </div> -->
+
+                <div class="col-12" id="infographic-sources" style="display: none;">
+                    <h3>Image Sources (APA format)</h3>
+
+                    <p>All the Beautiful Things. (2016, November 9). Get symptoms looked at. Retrieved from
+                        <a href="https://www.allthebeautifulthings.co.uk/2016/11/get-symptoms-looked-at"
+                            target="_blank">
+                            https://tinyurl.com/2nbz4e5y</a>
+                    </p>
+
+                    <p>Ashlee Tabrett. (n.d.). Understanding your menstrual cycle and how to optimize fertility
+                        naturally. Retrieved from
+                        <a href="https://www.ashleetabrett.com/blog/understanding-your-menstrual-cycle-and-how-to-optimize-fertility-naturally"
+                            target="_blank">
+                            https://tinyurl.com/2mupm2e2</a>
+                    </p>
+
+                    <p>Chicago Tribune. (2016, September 19). World Contraception Day: What birth control is right for
+                        you? Retrieved from
+                        <a href="https://www.chicagotribune.com/2016/09/19/world-contraception-day-what-birth-control-is-right-for-you-infographic"
+                            target="_blank">
+                            https://tinyurl.com/y2b4aa2x</a>
+                    </p>
+
+                    <p>Efamol. (n.d.). Cycle syncing your workouts: How to exercise according to your menstrual cycle.
+                        Retrieved from
+                        <a href="https://www.efamol.com/blogs/advice/cycle-syncing-your-workouts-how-to-exercise-according-to-your-menstrual-cycle"
+                            target="_blank">
+                            https://tinyurl.com/5xb7dpxz</a>
+                    </p>
+
+                    <p>Examined Alive. (2024, October 1). Understanding the connection between menstrual health and
+                        overall well-being [Post]. Retrieved from
+                        <a href="https://x.com/examinedalive/status/1793663128481550710" target="_blank">
+                            https://tinyurl.com/yeyrrrme</a>
+                    </p>
+
+                    <p>Find My Method. (2024, October 7). External condoms: How to use and benefits [Post]. Retrieved
+                        from
+                        <a href="https://www.facebook.com/findmymethod/photos/a.1345171832292301/2375347952608012/?type=3"
+                            target="_blank">
+                            https://tinyurl.com/5n8yrdzz</a>
+                    </p>
+
+                    <p>Four Seasons of You. (n.d.). The four phases of you. Retrieved from
+                        <a href="https://4seasonsofyou.com/thefourphases-ofyou" target="_blank">
+                            https://tinyurl.com/bden9ptn</a>
+                    </p>
+
+                    <p>HIVinfo.NIH.gov. (n.d.). HIV and AIDS: What's the difference?. Retrieved from
+                        <a href="https://hivinfo.nih.gov/understanding-hiv/infographics/hiv-and-aids-whats-difference"
+                            target="_blank">
+                            https://tinyurl.com/5n92kubu</a>
+                    </p>
+
+                    <p>McLeod, S. (2020). Anxiety in women. Retrieved from
+                        <a href="https://www.simplypsychology.org/anxiety-in-women.html" target="_blank">
+                            https://tinyurl.com/2z87a3xe</a>
+                    </p>
+
+                    <p>Mind & Mom. (n.d.). Decoding discharge: Understanding cervical mucus and fertility. Retrieved
+                        from
+                        <a href="https://mindandmom.com/decoding-discharge-understanding-cervical-mucus-and-fertility"
+                            target="_blank">
+                            https://tinyurl.com/mryxuu2t</a>
+                    </p>
+
+                    <p>New Jersey Family Planning League. (n.d.). How to put on a condom. Retrieved from
+                        <a href="https://njfpl.org/how-to-put-on-a-condom" target="_blank">
+                            https://tinyurl.com/bddvjur7</a>
+                    </p>
+
+                    <p>Pinterest. (n.d.). Signs of hormonal imbalance. Retrieved from
+                        <a href="https://au.pinterest.com/pin/165929567507932898" target="_blank">
+                            https://au.pinterest.com/pin/165929567507932898</a>
+                    </p>
+
+                    <p>Shop With Me Mama. (n.d.). Easily understand the ovulation process. Retrieved from
+                        <a href="https://shopwithmemama.com/easily-understand-ovulation-process" target="_blank">
+                            https://tinyurl.com/4b7bk2fn</a>
+                    </p>
+
+                    <p>StrongHer. (n.d.). Training around your menstrual cycle. Retrieved from
+                        <a href="https://www.strongher.co.uk/blog/training-around-your-menstrual-cycle" target="_blank">
+                            https://tinyurl.com/fpcwn7vj</a>
+                    </p>
+
+                    <p>The Daily Texan. (2017, April 25). Condoms, not ignorance, belong in bedroom. Retrieved from
+                        <a href="https://thedailytexan.com/2017/04/25/condoms-not-ignorance-belong-in-bedroom"
+                            target="_blank">
+                            https://tinyurl.com/pc3zyt54</a>
+                    </p>
+
+                    <p>The Gym Starter. (2020, March 14). How does your menstrual cycle affect your fitness and weight
+                        loss?. Retrieved from
+                        <a href="https://www.thegymstarter.com/blog/2020/3/14/how-does-your-menstrual-cycle-affect-your-fitness-and-weight-loss"
+                            target="_blank">
+                            https://tinyurl.com/9h3kpndw</a>
+                    </p>
+
+                    <p>Travis, A. (2016). HPV infographics: Protect and prevent. Retrieved from
+                        <a href="https://travistheillustrator.com/2016-hpv-infographics-protect-prevent"
+                            target="_blank">
+                            https://tinyurl.com/4twbhkdt</a>
+                    </p>
+
+                    <p>University of Texas at El Paso. (n.d.). Healthy mind infographics. Retrieved from
+                        <a href="https://www.utep.edu/healthy-mind/infographics/infographics.html" target="_blank">
+                            https://tinyurl.com/ymduybrz</a>
+                    </p>
+
+                    <p>Venngage. (n.d.). AIDS statistics infographic. Retrieved from
+                        <a href="https://venngage.com/templates/infographics/aids-statistics-infographics-2ebaef87-f3e7-4cd1-8c8d-2306de387774"
+                            target="_blank">
+                            https://tinyurl.com/4z7kbkf9</a>
+                    </p>
+
+                    <p>Virginia De Martin. (2024, October 6). Recovery from training across the menstrual cycle:
+                        Insights from top athletes [Post]. Retrieved from
+                        <a href="https://www.linkedin.com/posts/virginia-de-martin-188735a7_recovery-from-training-across-the-menstrual-activity-7118141071783567361-A2Jg?trk=public_profile_share_view"
+                            target="_blank">
+                            https://tinyurl.com/5cvnfs5z</a>
+                    </p>
+
+                    <p>Wellness Hub. (2024, October 7). Managing menstrual symptoms with holistic approaches [Post].
+                        Retrieved from
+                        <a href="https://www.facebook.com/story.php/?story_fbid=943391917582809&id=100057360283752"
+                            target="_blank">
+                            https://tinyurl.com/4fxwure5</a>
+                    </p>
+
+                </div>
+
+
+                <div class="col-12 mt-4" id="additional-content"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class=" footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-left text-center mb-3 mb-md-0">
+                    <img src="images/footerlogo.png" alt="Logo" class="footer-logo" style="max-width: 300px;">
+                </div>
+
+                <div class="col-md-6 text-md-right text-center mb-3 mb-md-0">
+                    <h5 class="font-weight-bold">Contact Us</h5>
+                    <p>Email: <a href="mailto:support@supportforherau.com">support@supportforherau.me</a>
+                    </p>
+                    <p>Phone: +61 123 456 789</p>
+                    <p>Address: Clayton Street, Melbourne, VIC 3000, Australia</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <p class="small mb-0">&copy; 2024 Support For Her AU. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/infographic.js"></script>
+
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

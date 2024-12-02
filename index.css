@@ -1,0 +1,260 @@
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#parent-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.translate-container {
+    float: right;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    text-align: center;
+}
+
+.support-icon {
+    width: 55px;
+}
+
+
+.hotline-text {
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    bottom: 130px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 320px;
+    z-index: 9999;
+}
+
+.popup-container p {
+    margin: 0 0 10px;
+}
+
+#serviceSelect {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.hotline-number {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#serviceSelect {
+    width: 100%;
+    min-width: 280px;
+    margin-bottom: 10px;
+    padding: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+#discover-btn {
+    background-color: #fbebd4;
+    color: #483b31;
+}
+
+#discover-btn:hover {
+    background-color: #846948;
+    color: #F9F5F2;
+}
+
+
+.first-section {
+    background: url('../images/main.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+    font-family: 'Montserrat', Cambria, serif;
+}
+
+
+
+.first-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.first-subtitle {
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+/* Info Section */
+.info-section {
+    background-color: #F9F5F2;
+    padding: 60px 0;
+}
+
+.info-section .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4A2E1C;
+}
+
+.info-section .section-text {
+    font-size: 1rem;
+    color: #4A2E1C;
+    margin-top: 20px;
+}
+
+/* Button Group in Info Section */
+.info-section .button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.btn:hover {
+    background-color: #846948;
+}
+
+.service-image img {
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.our-services-section {
+    font-size: 400px;
+    font-weight: bold;
+    color: #4A2E1C;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.our-services-section {
+    padding: 60px 20px;
+    background-color: #f2ecde;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-section .col-md-6 {
+    padding: 20px;
+}
+
+
+.service-item {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.service-text h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4A2E1C;
+    margin-bottom: 20px;
+}
+
+
+/* Quote Container Styling */
+.quote-container {
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Title Styling */
+.services-bold-title,
+.our-services-title {
+    color: #483b31;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* Adjust the section padding for spacing */
+.our-services-section {
+    background-color: #f6e3db;
+    padding: 60px 0;
+}
+
+p a {
+    color: #4A2E1C;
+    font-weight: bold;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+
+
+    .quote-container {
+        padding: 20px 15px;
+    }
+
+    .services-bold-title,
+    .our-services-title {
+        font-size: 1.8rem;
+    }
+
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-text {
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        margin: 12px;
+        text-align: center;
+    }
+
+
+}
+
+
+
+@media (max-width: 300px) {
+
+    .section-title {
+        margin: 7px;
+        text-align: center;
+    }
+
+    .section-text {
+        text-align: center;
+        margin: 7px;
+    }
+}

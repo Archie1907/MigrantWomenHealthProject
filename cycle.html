@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Tracker | Support for Her</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cycle.css">
+    <div id="parent-container">
+        <div id="google_translate_element" class="translate-container"></div>
+    </div>
+
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Support For Her Logo" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menstrualCycleDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menstrual Cycle
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="menstrualCycleDropdown">
+                        <a class="dropdown-item" href="cycle.html">Cycle Tracker</a>
+                        <a class="dropdown-item" href="quiz.html">Menstrual Cycle Quiz</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="personalisedAssessmentDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Personalised Assessment
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="personalisedAssessmentDropdown">
+                        <a class="dropdown-item" href="report.html">Personalised Report</a>
+                        <a class="dropdown-item" href="maternal.html">Maternal Health Risk Assessment</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="knowledgeHubDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Knowledge Hub
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="knowledgeHubDropdown">
+                        <a class="dropdown-item" href="infographic.html">Infographics</a>
+                        <a class="dropdown-item" href="policy.html">Policy Finder</a>
+                        <a class="dropdown-item" href="visualisation.html">STI Data</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="language-selector" class="nav-link">Language</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Header Section -->
+
+    <section class="header-section text-center">
+        <h1 class="page-title">Cycle Tracker</h1>
+        <p class="cycle-description">
+            Please enter the following information to get personalised insights and information
+            based on your menstrual cycle
+            data. The insights you receive are informed by trusted guidelines from reputable organizations, including
+            the World Health Organization (WHO).
+        </p>
+
+
+        <!-- Main Content -->
+        <div class="calendar-container">
+
+            <div class="calendar">
+                <h3>Step 1: Select Your Age from the Following Groups</h3>
+                <div class="select-container">
+                    <select id="age">
+                        <option value="" disabled selected>Select your age</option>
+                        <option value="15-20">15-20</option>
+                        <option value="21-30">21-30</option>
+                        <option value="31-40">31-40</option>
+                        <option value="41 and older">41 and older</option>
+                    </select>
+                </div>
+                <div class="calendar">
+                    <h3>Step 2: What’s your usual cycle length?</h3>
+                    <div class="button-container">
+                        <button class="decrement-btn">−</button>
+                        <span class="cycle-length" id="cycle-length">28 Days</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <div class="spacer"></div>
+                    <h3>Step 3: Select Your Last Menstrual Cycle Start and End Date</h3>
+                    <div class="cal-css">
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar">
+                <div class="calendar">
+
+                    <h3>Results: Your Next Estimated Cycle</h3>
+                    <div class="estimated-css">
+                        <div id="estimated-calendar"></div>
+                    </div>
+                    <div class="calendar-legend">
+                        <span class="legend-color"></span>
+                        <span class="legend-text">Represents your next cycle duration</span>
+                    </div>
+                    <p id="warning-text">
+                        ***This period tracker provides an estimated time frame for your next cycle, but your individual
+                        menstrual cycle may
+                        differ
+                        from these predictions.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-container" id="analysis-section" style="display: none;">
+            <div class="analysis-section">
+                <h2>Your Cycle Analysis</h2>
+                <div id="age-group-info"></div>
+
+
+                <div id="cycle-analysis" class="hidden-content">
+
+                    <h3>Your Cycle Length Distribution</h3>
+                    <p>This table shows the distribution of cycle lengths among women in your age group, including your
+                        own
+                        cycle length.</p>
+                    <canvas id="cycleLengthChart" width="400" height="200"></canvas>
+                    <div id="disclaimer-container">
+                        <p id="disclaimer">
+                            The data used in here is sourced from a dataset available on Kaggle. The dataset includes
+                            information related to menstrual cycles and has been utilized here to calculate the average
+                            cycle length for different age groups.
+                        </p>
+                    </div>
+                    <p id="cycleLengthChartCaption"></p>
+
+                    <div id="cycle-message"></div>
+
+                    <div id="quiz-info">
+                        <p>How well do you understand the menstrual cycle? Take <a href="quiz.html">our
+                                quiz</a> and
+                            test your knowledge! Or Use <a href="infographic.html"> our infographics </a> page to learn
+                            more
+                            about menstrual cycles</p>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-left text-center mb-3 mb-md-0">
+                    <img src="images/footerlogo.png" alt="Logo" class="footer-logo" style="max-width: 300px;">
+                </div>
+
+                <div class="col-md-6 text-md-right text-center mb-3 mb-md-0">
+                    <h5 class="font-weight-bold">Contact Us</h5>
+                    <p>Email: <a href="mailto:support@supportforherau.com">support@supportforherau.me</a></p>
+                    <p>Phone: +61 123 456 789</p>
+                    <p>Address: Clayton Street, Melbourne, VIC 3000, Australia</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <p class="small mb-0">&copy; 2024 Support For Her AU. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.0.0"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/cycle.js"></script>
+
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+
+</html>

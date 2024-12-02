@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maternal Health Risk Assessment | Support for Her</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/maternal.css">
+    <div id="google_translate_element" class="translate-container"></div>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Support For Her Logo" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menstrualCycleDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menstrual Cycle
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="menstrualCycleDropdown">
+                        <a class="dropdown-item" href="cycle.html">Cycle Tracker</a>
+                        <a class="dropdown-item" href="quiz.html">Menstrual Cycle Quiz</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="personalisedAssessmentDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Personalised Assessment
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="personalisedAssessmentDropdown">
+                        <a class="dropdown-item" href="report.html">Personalised Report</a>
+                        <a class="dropdown-item" href="maternal.html">Maternal Health Risk Assessment</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="knowledgeHubDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Knowledge Hub
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="knowledgeHubDropdown">
+                        <a class="dropdown-item" href="infographic.html">Infographics</a>
+                        <a class="dropdown-item" href="policy.html">Policy Finder</a>
+                        <a class="dropdown-item" href="visualisation.html">STI Visualisation</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="language-selector" class="nav-link">Language</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="disclaimermatPopup" class="popup">
+        <div class="popup-content">
+            <h2>Disclaimer</h2>
+            <p> Your responses are confidential and will only be used to generate this
+                report. We do not store or share your personal data. If you agree, you may continue filling out the
+                form. If you disagree, you will be redirected to the home page.</p>
+            <button id="agreematBtn">I Agree</button>
+            <button id="disagreematBtn">I Disagree</button>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+
+    <section class="header-section text-center">
+        <h1 class="page-title">Maternal Health Risk Assessment</h1>
+        <p class="maternal-description">
+            Please provide the following information to receive personalised insights into your maternal health risks.
+            The values provided here serve as a general guideline and are not a substitute for professional medical
+            advice. If your measurements fall outside the specified ranges, it is advisable to consult a general
+            practitioner (GP) or a healthcare provider.
+        </p>
+
+        <form id="healthForm">
+            <div class="form-group">
+                <label for="age">Age (16-50):</label>
+                <input type="number" id="age" name="age" min="16" max="50" required>
+                <span class="error-message" id="ageError"></span>
+            </div>
+            <div class="form-group">
+                <label for="systolicBP">Systolic Blood Pressure (70-160):
+                    <span class="info-icon"
+                        data-tooltip="Systolic blood pressure is the pressure in your arteries when your heart beats.">i</span>
+                </label>
+                <input type="number" id="systolicBP" name="systolicBP" min="70" max="160" required>
+                <span class="error-message" id="systolicBPError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="diastolicBP">Diastolic Blood Pressure (49-100):
+                    <span class="info-icon"
+                        data-tooltip="Diastolic blood pressure is the pressure in your arteries when your heart is at rest between beats.">i</span>
+                </label>
+                <input type="number" id="diastolicBP" name="diastolicBP" min="49" max="100" required>
+                <span class="error-message" id="diastolicBPError"></span>
+            </div>
+            <div class="form-group">
+                <label for="bs">Blood Sugar (6.0-19.0): <span class="info-icon"
+                        data-tooltip="Blood sugar is the amount of glucose in your blood, which your body uses for energy.">i</span></label>
+                <input type="number" id="bs" name="bs" min="6.0" max="19.0" step="0.1" required>
+                <span class="error-message" id="bsError"></span>
+            </div>
+            <div class="form-group">
+                <label for="bodyTemp">Body Temperature (36.1-38.0°C):
+                    <span class="info-icon body-temp-icon"
+                        data-tooltip="Enter your body temperature to see the equivalent in fahrenheit">i</span>
+                </label>
+                <input type="number" id="bodyTemp" name="bodyTemp" min="36.1" max="38.0" step="0.1" required>
+                <span class="error-message" id="bodyTempError"></span>
+            </div>
+            <div class="form-group">
+                <label for="heartRate">Heart Rate (60-100):</label>
+                <input type="number" id="heartRate" name="heartRate" min="60" max="100" required>
+                <span class="error-message" id="heartRateError"></span>
+            </div>
+            <button type="submit" class="btn-custom">Submit</button>
+        </form>
+
+
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Processing your responses...</p>
+        </div>
+
+        <!-- Results shown to users -->
+        <div id="result-advice-container" class="hidden-content">
+
+
+            <div id="result"></div>
+            <div id="advice"></div>
+            <div id="additional-info">
+                <p>Please be advised that the suggestions provided here are not a substitute for professional medical
+                    advice. Always consult a GP or healthcare professional for accurate medical guidance and treatment.
+                </p>
+
+            </div>
+        </div>
+        <div id="redirectInfo" class="hidden-content">
+            <p>Do you want to stay informed about your healthcare rights in Australia? Use <a href="policy.html">our
+                    policy finder</a> for the latest information, and get personalised insights on sexual and
+                reproductive health, including tailored nutrition and exercise recommendations, with <a
+                    href="report.html">our personalised report</a></p>
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-left text-center mb-3 mb-md-0">
+                    <img src="images/footerlogo.png" alt="Logo" class="footer-logo" style="max-width: 300px;">
+                </div>
+
+                <div class="col-md-6 text-md-right text-center mb-3 mb-md-0">
+                    <h5 class="font-weight-bold">Contact Us</h5>
+                    <p>Email: <a href="mailto:support@supportforherau.com">support@supportforherau.me</a></p>
+                    <p>Phone: +61 123 456 789</p>
+                    <p>Address: Clayton Street, Melbourne, VIC 3000, Australia</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <p class="small mb-0">&copy; 2024 Support For Her AU. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/maternal.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

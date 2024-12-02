@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support For Her</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <div id="parent-container">
+        <div id="google_translate_element" class="translate-container"></div>
+    </div>
+
+</head>
+
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Support For Her Logo" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menstrualCycleDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menstrual Cycle
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="menstrualCycleDropdown">
+                        <a class="dropdown-item" href="cycle.html">Cycle Tracker</a>
+                        <a class="dropdown-item" href="quiz.html">Menstrual Cycle Quiz</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="personalisedAssessmentDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Personalised Assessment
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="personalisedAssessmentDropdown">
+                        <a class="dropdown-item" href="report.html">Personalised Report</a>
+                        <a class="dropdown-item" href="maternal.html">Maternal Health Risk Assessment</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="knowledgeHubDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Knowledge Hub
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="knowledgeHubDropdown">
+                        <a class="dropdown-item" href="infographic.html">Infographics</a>
+                        <a class="dropdown-item" href="policy.html">Policy Finder</a>
+                        <a class="dropdown-item" href="visualisation.html">STI Visualisation</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="language-selector" class="nav-link">Language</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- First Section -->
+    <header class="first-section">
+
+        <div class="container text-center">
+            <h1 class="first-title">Supporting HER journey to health</h1>
+            <p class="first-subtitle">At Support for Her, we are dedicated to empowering migrant women in Australia
+                by
+                bridging the knowledge gap in sexual and reproductive health. Our platform provides accessible,
+                culturally sensitive resources and information to help women make informed decisions about their health.
+            </p>
+            <a href="#service-item-section" class="btn btn-custom mr-3" id="discover-btn">Discover More</a>
+        </div>
+    </header>
+
+
+    <div class="floating-button" id="hotlineBtn">
+        <img src="images/phone.png" alt="Phone Icon" class="support-icon">
+        <div class="hotline-text">Hotline Support</div>
+    </div>
+
+    <div class="popup-container" id="popupContainer">
+        <span class="close-btn" id="closePopup">&times;</span>
+
+        <p>What type of service do you need help with?</p>
+        <select id="serviceSelect">
+            <option value="" disabled selected>Select an option</option>
+            <option value="sti">STI Testing and Support</option>
+            <option value="lgbtqa">LGBTQA+ Sexual Health Support</option>
+            <option value="violence">Sexual Violence Hotline</option>
+            <option value="general">General Sexual Health Concerns</option>
+            <option value="translation">Translation and Interpretation Service</option>
+        </select>
+        <p id="hotlineNumber" class="hotline-number"></p>
+    </div>
+
+
+    <section class="info-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="images/computer.jpg" alt="Woman with Laptop" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="section-title">Take control of your sexual reproductive health</h2>
+                    <p class="section-text">Use our comprehensive tools to manage your sexual and reproductive health.
+                        Use <a href="cycle.html">Cycle Tracker</a> for personalised insights on your
+                        menstrual cycle, explore
+                        the latest reproductive rights with
+                        <a href="policy.html">Find
+                            Policy</a>, and take our <a href="quiz.html">Menstrual Cycle
+                            Quiz</a> to learn
+                        something new.
+                        Use the
+                        <a href="report.html">Personalised
+                            Report</a> for tailored recommendations, or dive into Australia’s STI trends
+                        with
+                        <a href="visualisation.html">STI
+                            Visualisation</a>. Access clear, visual guides on sexual health topics with our
+                        <a href="infographic.html">Infographic</a> feature, and
+                        assess potential maternal health risks with a customised evaluation using our <a
+                            href="maternal.html">Maternal
+                            Health
+                            Risk Assessment</a>. Stay informed and take control of your sexual and
+                        reproductive
+                        health today.
+
+                </div>
+            </div>
+    </section>
+
+    <section class="our-services-section text-center py-5">
+        <div class="quote-container">
+            <h1 class="services-bold-title">Your Health, Your Choice: <h1></h1>
+                <h1 class="our-services-title">Navigate Your Sexual and Reproductive Journey with
+                    Confidence</h1>
+
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="row service-item" id="service-item-section">
+                <div class="col-md-6 service-image">
+                    <img src="images/periodtracker.jpg" alt="Women on period" class="img-fluid">
+                </div>
+                <div class="col-md-6 service-text">
+                    <h3>CYCLE TRACKER</h3>
+                    <p>
+                        Our cycle tracker is a user-friendly tool designed to help you monitor and manage your
+                        menstrual
+                        cycle. By inputting a few key details, you can easily track your cycle length, predict your next
+                        period, and receive alerts for any unusual changes. This tool helps you stay informed about your
+                        reproductive health, allowing you to plan ahead and manage symptoms more effectively.
+                    </p>
+                    <a href="cycle.html" class="btn btn-custom mr-3">Get Started</a>
+                </div>
+            </div>
+
+            <div class="row service-item">
+                <div class="col-md-6 service-text">
+                    <h3>POLICY FINDER</h3>
+                    <p>
+                        Our policy finder is designed to provide you with relevant information on sexual and
+                        reproductive
+                        health rights and services in Australia. By using this tool, you can quickly access tailored
+                        insights on important topics like contraception and STI information
+                        ensuring you’re informed and empowered to make the best healthcare decisions for yourself.
+                    </p>
+                    <a href="policy.html" class="btn btn-custom mr-3">Explore Now</a>
+                </div>
+                <div class="col-md-6 service-image">
+                    <img src="images/policyfinder.jpg" alt="Report" class="img-fluid">
+                </div>
+            </div>
+
+
+            <section class="services-section">
+                <div class="container">
+                    <div class="row service-item">
+                        <div class="col-md-6 service-image">
+                            <img src="images/quiz.jpg" alt="Quiz Image" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 service-text">
+                            <h3>MENSTRUAL CYCLE QUIZ</h3>
+                            <p>
+                                Test your knowledge on sexual and reproductive health with our fun and interactive quiz.
+                                Challenge yourself and learn something new about your body and health. Get started today
+                                and see how much you know!
+                            </p>
+                            <a href="quiz.html" class="btn btn-custom mr-3">Take the Quiz</a>
+                        </div>
+                    </div>
+
+                    <div class="row service-item">
+                        <div class="col-md-6 service-text">
+                            <h3>PERSONALISED SEXUAL AND REPRODUCTIVE HEALTH REPORT</h3>
+                            <p>
+                                Generate a personalised report by providing some basic information. This tool will
+                                analyse your input and give you a report with tailored insights. Stay informed
+                                and take control of your sexual and reproductive health.
+                            </p>
+                            <a href="report.html" class="btn btn-custom mr-3">Get Your Report</a>
+                        </div>
+                        <div class="col-md-6 service-image">
+                            <img src="images/report.jpg" alt="Women holding report" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <div class="row service-item">
+                <div class="col-md-6 service-image">
+                    <img src="images/infographic.jpg" alt="Woman holding stack of books" class="img-fluid">
+                </div>
+                <div class="col-md-6 service-text">
+                    <h3> INFOGRAPHICS</h3>
+                    <p>
+                        Access clear and straightforward visual guides on sexual diseases, menstrual cycles, and
+                        contraception methods. Find empowering information you need to manage your sexual
+                        and reproductive health. Stay informed and take charge of your well-being with easy-to-digest,
+                        essential insights at your fingertips.
+
+                    </p>
+                    <a href="infographic.html" class="btn btn-custom mr-3">Learn More</a>
+                </div>
+            </div>
+
+            <div class="row service-item">
+                <div class="col-md-6 service-text">
+                    <h3>STI VISUALISATION</h3>
+                    <p>
+                        Dive into Australia’s STI data with our engaging, interactive tool.
+                        Easily explore key trends and filter by region. Learn more about the data that impacts your
+                        health and make informed decisions to
+                        support your well-being. Start exploring today!
+
+                    </p>
+                    <a href="visualisation.html" class="btn btn-custom mr-3">Explore Data</a>
+                </div>
+                <div class="col-md-6 service-image">
+                    <img src="images/visualisation.jpg" alt="Women holding report" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row service-item">
+                <div class="col-md-6 service-image">
+                    <img src="images/pregnancy.jpg" alt="Pregnant Woman" class="img-fluid">
+                </div>
+                <div class="col-md-6 service-text">
+                    <h3>MATERNAL HEALTH RISK ASSESSMENT</h3>
+                    <p>
+                        Receive a personalised assessment on potential maternal health risks. This tool evaluates your
+                        health data to provide insights into potential risks, helping you stay informed and take
+                        proactive steps for a healthy pregnancy. Stay in control of your well-being with a detailed,
+                        customised analysis.
+                    </p>
+                    <a href="maternal.html" class="btn btn-custom mr-3">Get Risk Assessment</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-left text-center mb-3 mb-md-0">
+                    <img src="images/footerlogo.png" alt="Logo" class="footer-logo" style="max-width: 300px;">
+                </div>
+
+                <div class="col-md-6 text-md-right text-center mb-3 mb-md-0">
+                    <h5 class="font-weight-bold">Contact Us</h5>
+                    <p>Email: <a href="mailto:support@supportforherau.com">support@supportforherau.me</a></p>
+                    <p>Phone: +61 123 456 789</p>
+                    <p>Address: Clayton Street, Melbourne, VIC 3000, Australia</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <p class="small mb-0">&copy; 2024 Support For Her AU. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="js/nav.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

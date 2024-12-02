@@ -1,0 +1,573 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.header-section {
+    padding: 40px 20px;
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#disclaimer-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#disclaimer {
+    width: 70%;
+    text-align: right;
+    font-size: 0.5em;
+}
+
+#parent-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.translate-container {
+    float: right;
+}
+
+.cycle-description {
+    line-height: 1.8;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#cycle-analysis {
+    margin-top: 40px;
+}
+
+#cycle-message {
+    margin-top: 10px;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    transition: all 0.3s ease;
+    /* Smooth transition */
+    overflow: hidden;
+}
+
+.highlighted-date {
+    background-color: #a47857 !important;
+    color: white !important;
+}
+
+
+.hidden-content {
+    display: none;
+}
+
+.show-content {
+    display: block;
+}
+
+
+.calendar,
+.analysis-section {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    min-width: 300px;
+}
+
+
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4A2E1C;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.select-container {
+    margin-bottom: 5px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+select {
+    background-color: #8B5E3C;
+    color: #FFF;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.select-container::after {
+    content: '▼';
+    font-size: 1rem;
+    color: #FFF;
+    position: absolute;
+    right: calc(50% - 140px);
+    top: calc(50% - 8px);
+    pointer-events: none;
+}
+
+.flatpickr-calendar {
+    background-color: rgba(210, 180, 160, 0.8);
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: none;
+}
+
+.flatpickr-current-month input.cur-year {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4A2E1C;
+    padding: 0 2px;
+    margin: 0;
+    border: none;
+    width: 3.5em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.flatpickr-current-month input.cur-year:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 10px;
+    z-index: 3;
+    color: #4A2E1C;
+}
+
+.flatpickr-months .flatpickr-prev-month {
+    left: 0;
+}
+
+.flatpickr-months .flatpickr-next-month {
+    right: 0;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
+    color: #a67652;
+}
+
+.flatpickr-months {
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+    color: #a67652;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.flatpickr-weekdaycontainer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #846948;
+}
+
+.flatpickr-weekdays {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.flatpickr-weekday {
+    color: #ffffff;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+
+}
+
+.flatpickr-days {
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.flatpickr-day {
+    background-color: #ffffff;
+    color: #4A2E1C;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    padding: 5px;
+    margin: 2px;
+    cursor: pointer;
+    text-align: center;
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.flatpickr-day:hover {
+    background-color: #b69d93;
+    color: #ffffff;
+}
+
+/* Start and end dates of the range */
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+    background-color: #a67652;
+    color: #ffffff;
+}
+
+/* Highlighted dates in the range */
+.flatpickr-day.inRange {
+    background-color: #b69d93;
+}
+
+.flatpickr-day.selected {
+    background-color: #b69d93;
+}
+
+.flatpickr-day.disabled,
+.flatpickr-day.disabled:hover {
+    background-color: #f2ecde;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.flatpickr-innerContainer {
+    margin-left: 40px;
+}
+
+.age-info-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fdfaf7;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.age-info-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4A2E1C;
+}
+
+.age-info-container p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #4A2E1C;
+}
+
+.button-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.increment-btn,
+.decrement-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.increment-btn:hover,
+.decrement-btn:hover {
+    color: #795838;
+}
+
+.spacer {
+    height: 15px;
+}
+
+#warning-text {
+    margin-top: 50px;
+}
+
+.cal-css,
+.estimated-css {
+    margin: 0 auto;
+    display: block;
+    max-width: 500px;
+}
+
+#estimated-calendar {
+    pointer-events: none;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #a47857;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1130px) {
+    .calendar-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .calendar,
+    .analysis-section {
+        width: auto;
+        max-width: none;
+    }
+
+    .estimated-css {
+        max-width: 45%;
+        padding: 0;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cal-css {
+        max-width: 70%;
+        padding: 0;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1129px) {
+    .calendar-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .calendar,
+    .analysis-section {
+        width: auto;
+        max-width: none;
+    }
+
+    .estimated-css {
+        max-width: 400px;
+        padding: 0;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cal-css {
+        padding: 0;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+
+    .cal-css {
+        max-width: 400px;
+    }
+
+
+    .calendar-container {
+        padding: 10px;
+        gap: 20px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+    .cal-css,
+    .estimated-css {
+        max-width: fit-content;
+        padding: 0;
+        justify-content: left;
+        align-items: left;
+    }
+
+    .flatpickr-rContainer {
+        margin-left: 20px;
+    }
+
+    .calendar-container {
+        padding: 5px;
+        gap: 20px;
+    }
+
+    .calendar,
+    .analysis-section {
+        width: 100%;
+        padding: 5px;
+    }
+
+
+    .flatpickr-current-month input.cur-year {
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: #4A2E1C;
+        padding: 0 2px;
+        margin: 0;
+        border: none;
+        width: 3.5em;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+
+
+    .flatpickr-months .flatpickr-prev-month,
+    .flatpickr-months .flatpickr-next-month {
+        text-decoration: none;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        padding: 10px;
+        z-index: 3;
+        color: #4A2E1C;
+    }
+
+    .flatpickr-months {
+        font-family: 'Montserrat', sans-serif;
+        background-color: transparent;
+        color: #a67652;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+
+    .flatpickr-weekdaycontainer {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #846948;
+    }
+
+    .flatpickr-weekdays {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .flatpickr-weekday {
+        color: #ffffff;
+        font-weight: bold;
+        flex: 1;
+        text-align: center;
+
+    }
+
+    .flatpickr-days {
+        width: 100%;
+        display: grid;
+        gap: 5px;
+        justify-items: center;
+        align-items: center;
+        padding-top: 5px;
+    }
+
+    .flatpickr-day {
+        background-color: #ffffff;
+        color: #4A2E1C;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        border: 1px solid #fff;
+        padding: 5px;
+        margin: 1px;
+        cursor: pointer;
+        text-align: center;
+        width: 90%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flatpickr-innerContainer {
+        margin-left: 0px;
+    }
+
+}

@@ -1,0 +1,202 @@
+body {
+    font-family: 'Montserrat', Cambria, serif;
+    background-color: #F9F5F2;
+    color: #4A2E1C;
+    font-size: 1.3rem;
+}
+
+
+#google_translate_element {
+    display: none;
+}
+
+#google_translate_element .goog-te-combo {
+    width: 100%;
+    max-width: none;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+    padding: 5px;
+}
+
+#google_translate_element {
+    max-width: 100%;
+    overflow: visible;
+}
+
+#language-selector {
+    cursor: pointer;
+}
+
+.translate-container {
+    margin-left: auto;
+}
+
+.goog-te-gadget {
+    font-size: inherit !important;
+    font-family: inherit !important;
+}
+
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.goog-te-menu-value {
+    color: #F9F5F2 !important;
+    font-weight: 400;
+}
+
+
+
+/* Navbar */
+.navbar {
+    background-color: #8a6752;
+    padding: 20x 0;
+}
+
+.navbar .nav-link {
+    color: #f2ecde;
+    transition: color 0.3s ease;
+    font-size: 1.3rem;
+}
+
+.navbar .nav-link:hover {
+    font-size: 1.3rem;
+    color: #b0892e;
+
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #5A3A2A;
+    color: white;
+}
+
+
+.dropdown-item {
+    font-size: 1.3rem;
+}
+
+.active-link {
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #8a6752;
+    color: #f2ecde;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+.footer .footer-logo {
+    max-width: 300px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #f2ecde;
+}
+
+.footer a {
+    color: #f2ecde;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .small {
+    font-size: 0.75rem;
+}
+
+
+
+.navbar-toggler {
+    border: none;
+    background-color: #f2ecde;
+}
+
+.navbar-toggler-icon {
+    background-color: #f2ecde;
+    border-radius: 3px;
+    width: 24px;
+    height: 3px;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    background-color: #5A3A2A;
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 3px;
+}
+
+.navbar-toggler-icon::before {
+    top: -5px;
+}
+
+.navbar-toggler-icon::after {
+    top: 4px;
+}
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    padding-left: 20px;
+}
+
+.btn-custom {
+    background-color: #5A3A2A;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #846948;
+    /* color: #4A2E1C; */
+}
+
+
+
+/* Image Styles */
+.img-fluid.rounded {
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+    .service-item,
+    .team-section .row,
+    .calendar-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .team-image,
+    .service-image {
+        margin: 20px 0;
+        max-width: 90%;
+    }
+
+    .footer .text-md-left,
+    .footer .text-md-right,
+    .footer .text-center {
+        text-align: center !important;
+    }
+
+    .footer .mb-md-0 {
+        margin-bottom: 10px !important;
+    }
+}
